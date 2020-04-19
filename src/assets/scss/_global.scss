@@ -1,0 +1,51 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $font-white;
+    background-color: #212327;
+    overflow: hidden;
+    *{
+        font-family: 'Ubuntu', sans-serif;
+    }
+}
+
+.mobile-landscape-detector{
+    display: none;
+}
+
+@media screen and (max-width: $tablet-large) and (orientation:landscape) {
+    body{
+        pointer-events: none;
+        overflow: hidden;
+        max-width: 100vw;
+        max-height: 100vh;
+    }
+    .mobile-landscape-detector{
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        max-width: 100vw;
+        max-height: 100vh;
+        overflow: hidden;
+        background-color: black;
+        z-index: 9999999999999;
+        pointer-events: none;
+        flex-direction: column;
+        p{
+            color: white;
+        }
+        i{
+            color: white;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+    }
+}

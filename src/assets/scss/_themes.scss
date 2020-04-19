@@ -1,0 +1,73 @@
+.app{
+    &.infected-theme{
+        .el-button{
+            span.theme{
+                color: $infected
+            }
+        }
+        .map{
+            &__nation {
+                &.all-hovered{
+                    .map__land {
+                        fill: $infected;
+                    }
+                }
+                &:not(.all-hovered) {
+                    .map__land {
+                        fill: $trans-black;
+                        &.is-hover, &.is-active {
+                            fill: $infected;
+
+                        }
+                    }
+                }
+            }
+        }
+        .cases-list{
+            ul{
+                li{
+                    &.is-active{
+                        .el-button{
+                            background-color: rgba($infected, .15);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.deceased-theme{
+        .el-button{
+            span.theme{
+                color: $deceased
+            }
+        }
+        .map{
+            &__nation {
+                &.all-hovered{
+                    .map__land {
+                        fill: $deceased;
+                    }
+                }
+                &:not(.all-hovered) {
+                    .map__land {
+                        fill: $trans-black;
+                        &.is-hover, &.is-active {
+                            fill: $deceased;
+                        }
+                    }
+                }
+            }
+        }
+        .cases-list{
+            ul{
+                li{
+                    &.is-active{
+                        .el-button{
+                            background-color: rgba($deceased, .15);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

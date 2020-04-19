@@ -1,0 +1,46 @@
+// sizes
+$mobile-small: 320px;
+$mobile-large: 767px;
+$tablet-small: 768px;
+$tablet-large: 1279px;
+$desktop-small: 1280px;
+$desktop-medium: 1600px;
+$desktop-large: 1920px;
+
+// desktop media
+@mixin desktop {
+    @media screen  and (min-width: $desktop-small) {
+        @content;
+    }
+}
+
+// tablet media
+@mixin tablet {
+    @media screen  and (min-width: $tablet-small) and (max-width: $tablet-large) {
+        @content;
+    }
+}
+
+// tablet + mobile combined media
+@mixin combined {
+    @media screen and (max-width: $tablet-large){
+        @content;
+    }
+}
+
+// mobile media
+@mixin mobile {
+    @media screen  and (max-width: $mobile-large) {
+        @content;
+    }
+}
+
+// colors
+
+$trans-black: rgba(black, .25);
+$gray: #3b3b3b;
+$dark-gray: #212327;
+$font-white: white;
+$infected: #ff8726;
+$deceased: #d21a1a;
+
