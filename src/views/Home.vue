@@ -37,7 +37,7 @@
             </section>
             <footer>
                 <div class="desktop">
-                    <p>Źródło grafiki Polski: <a href="http://amcharts.com/ammap">Amcharts</a> | Dane o zakażeniach dostarczone za pomocą <a :href="cases.readMe" target="_blank">APIFY</a>na podstawie danych <a :href="cases.sourceUrl">GOV</a> | Ostatnia aktualizacja: {{ cases.lastUpdatedAtApify | convertDate('pl', 'LLL')}}</p>
+                    <p>Źródło grafiki Polski: <a href="http://amcharts.com/ammap">Amcharts</a> | Dane o zakażeniach dostarczone za pomocą <a :href="cases.readMe" target="_blank">APIFY</a>na podstawie danych <a :href="cases.sourceUrl">GOV</a> | Ostatnia aktualizacja danych: {{ cases.lastUpdatedAtApify | convertDate('pl', 'LLL')}} | Wersja aplikacji z dnia: 19.04.2020</p>
                     <p>Kontakt: <a target="_blank" href="mailto:koronamapa@dimision.pl">koronamapa@dimision.pl</a> | 2020 © Autor aplikacji: <span class="author">Sebastian Tomys</span><a target="_blank" href="https://www.linkedin.com/in/sebastian-tomys/"><fa-icon :icon="['fab', 'linkedin']"></fa-icon></a></p>
                 </div>
                 <div class="mobile">
