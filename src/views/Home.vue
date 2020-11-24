@@ -129,14 +129,14 @@
             isLoaded(val){
                 if(val){
                     this.loading.close();
-                    this.$notify({
-                        title: 'Wersja testowa',
-                        message: 'Aktualnie trwa faza testowa aplikacji. Lista wspieranych urządzeń jest sukcesywnie rozszerzana. Wszelkie uwagi oraz pomysły proszę przesyłać na adres <a class="email" target="_blank" href="mailto:koronamapa@dimision.pl">email</a> podany w stopce lub poprzez Twittera <a class="twitter" href="https://twitter.com/Dimisionx" target="_blank">@Dimisionx</a>.',
-                        duration: 0,
-                        offset: 55,
-                        customClass: 'app-notify',
-                        dangerouslyUseHTMLString: true,
-                    });
+                    // this.$notify({
+                    //     title: 'Wersja testowa',
+                    //     message: 'Aktualnie trwa faza testowa aplikacji. Lista wspieranych urządzeń jest sukcesywnie rozszerzana. Wszelkie uwagi oraz pomysły proszę przesyłać na adres <a class="email" target="_blank" href="mailto:koronamapa@dimision.pl">email</a> podany w stopce lub poprzez Twittera <a class="twitter" href="https://twitter.com/Dimisionx" target="_blank">@Dimisionx</a>.',
+                    //     duration: 0,
+                    //     offset: 55,
+                    //     customClass: 'app-notify',
+                    //     dangerouslyUseHTMLString: true,
+                    // });
                 }
             }
         },

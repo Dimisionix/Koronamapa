@@ -7,16 +7,16 @@
         <el-button :class="[{'is-active': isActiveType('deceased')}]" class="deceased" size="small" round v-on:click="setCasesType('deceased')">
             <div class="circle"></div> Zgony: <span class="deceased"> {{ cases.deceased }}</span>
         </el-button>
-        <el-popover
-                placement="top-start"
-                trigger="click"
-                popper-class="app-donate-tooltip"
-        >
-            <p>Wesprzyj rozwój projektu:</p>
-            <a href="https://www.paypal.me/sebastiantomys" target="_blank" class="payment"><fa-icon :icon="['fab', 'cc-paypal']"></fa-icon>PayPal</a>
-            <a href="https://tipanddonation.com/dimision" target="_blank" class="payment"><fa-icon icon="credit-card"></fa-icon> BLIK, SMS oraz inne formy płatności</a>
-            <el-button class="donate" slot="reference"><fa-icon icon="gift"></fa-icon></el-button>
-        </el-popover>
+<!--        <el-popover-->
+<!--                placement="top-start"-->
+<!--                trigger="click"-->
+<!--                popper-class="app-donate-tooltip"-->
+<!--        >-->
+<!--            <p>Wesprzyj rozwój projektu:</p>-->
+<!--            <a href="https://www.paypal.me/sebastiantomys" target="_blank" class="payment"><fa-icon :icon="['fab', 'cc-paypal']"></fa-icon>PayPal</a>-->
+<!--            <a href="https://tipanddonation.com/dimision" target="_blank" class="payment"><fa-icon icon="credit-card"></fa-icon> BLIK, SMS oraz inne formy płatności</a>-->
+<!--            <el-button class="donate" slot="reference"><fa-icon icon="gift"></fa-icon></el-button>-->
+<!--        </el-popover>-->
     </div>
 </template>
 
