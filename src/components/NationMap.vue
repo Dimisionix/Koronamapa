@@ -132,7 +132,7 @@
     @import "../assets/scss/_variables.scss";
 
     $width: 84.7215vh;
-    $height: 80.556vh;
+    $height: 70.556vh;
 
     $mobile-width: 45vw;
     $mobile-height: 45vw;
@@ -185,7 +185,7 @@
             justify-content: center;
             p.tip{
                 position: absolute;
-                bottom: -1.823vh; //-35px;
+                bottom: -9.5vh;
                 font-size: 11px;
             }
         }

@@ -7,6 +7,20 @@
         <el-button :class="[{'is-active': isActiveType('deceased')}]" class="deceased" size="small" round v-on:click="setCasesType('deceased')">
             <div class="circle"></div> Zgony: <span class="deceased"> {{ cases.deceased }}</span>
         </el-button>
+        <template v-if="width <= 1279">
+            <el-button class="infected" size="small" round>
+                <div class="circle infected"></div> Dzienne zarażenia: <span class="infected"> {{ cases.dailyInfected }}</span>
+            </el-button>
+            <el-button class="deceased" size="small" round>
+                <div class="circle"></div> Dzienne zgodny: <span class="deceased"> {{ cases.dailyDeceased }}</span>
+            </el-button>
+            <el-button class="recovered" size="small" round>
+                <div class="circle"></div> Dzienne ozdrowienia: <span class="recovered"> {{ cases.dailyRecovered }}</span>
+            </el-button>
+            <el-button class="tested" size="small" round>
+                <div class="circle"></div> Dzienne testy: <span class="tested"> {{ cases.dailyTested }}</span>
+            </el-button>
+        </template>
 <!--        <el-popover-->
 <!--                placement="top-start"-->
 <!--                trigger="click"-->
@@ -31,7 +45,8 @@
                 sortedCases: [],
                 icons: {
                     pl_flag: pl_flag
-                }
+                },
+                width: 0
             }
         },
 
@@ -69,6 +84,10 @@
             stopHoverLands(){
                 this.$store.commit('SET_HOVER_LAND', false);
             }
+        },
+
+        mounted(){
+            this.width = window.innerWidth;
         }
     }
 </script>
@@ -114,6 +133,22 @@
                     background-color: rgba($deceased, .15);
                 }
             }
+            &.recovered{
+                .circle{
+                    background-color: $recovered;
+                }
+                &:hover, &:focus, &.is-active{
+                    background-color: rgba($recovered, .15);
+                }
+            }
+            &.tested{
+                .circle{
+                    background-color: $tested;
+                }
+                &:hover, &:focus, &.is-active{
+                    background-color: rgba($tested, .15);
+                }
+            }
         }
         .donate{
             position: absolute;
@@ -151,7 +186,7 @@
             padding: 1.563vw; //5px;
             width: 100%;
             border-radius: 0;
-            justify-content: center;
+            justify-content: flex-start;
             height: 100%;
             background-color: #191A1D;
             img{
@@ -161,6 +196,8 @@
             }
             &__container {
                 height: 100%;
+                max-width: 100vw;
+                overflow: scroll;
             }
             .el-button {
                 +.el-button {

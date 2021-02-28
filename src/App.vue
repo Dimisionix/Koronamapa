@@ -1,16 +1,17 @@
 <template>
     <div>
+        <noscript>
+            <h1>Mapa zarażeń koronawirusem (SARS-CoV-2) w Polsce</h1>
+        </noscript>
+        <router-view/>
         <div class="mobile-landscape-detector">
             <i class="fas fa-sync-alt"></i>
-            <p>Proszę obrócić urządzenie</p>
         </div>
-        <router-view/>
     </div>
 </template>
 
 <script>
     export default {
-
     }
 </script>
 

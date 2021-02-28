@@ -22,6 +22,7 @@
                     </a>
                     <a class="hash" href="https://twitter.com/search?q=%23zostanwdomu" target="_blank"><fa-icon icon="hashtag"></fa-icon>ZostańWDomu</a>
                 </div>
+                <cases-daily></cases-daily>
             </header>
             <section class="app__sidebar">
                 <cases-list></cases-list>
@@ -299,6 +300,12 @@
                 &.deceased {
                     color: $deceased;
                 }
+                &.recovered{
+                    color: $recovered;
+                }
+                &.tested{
+                    color: $tested;
+                }
             }
         }
         &-loader{
@@ -367,6 +374,15 @@
                 }
                 .fa-cc-paypal{
                     color: #00457C;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: $tablet-large) and (max-width: 1450px){
+        .app{
+            footer{
+                p{
+                    font-size: 9px;
                 }
             }
         }

@@ -18,6 +18,7 @@ Vue.component('fa-icon', FontAwesomeIcon);
 Vue.component('nation-map', require('./components/NationMap.vue').default);
 Vue.component('cases-list', require('./components/CasesList.vue').default);
 Vue.component('cases-summary', require('./components/CasesSummary.vue').default);
+Vue.component('cases-daily', require('./components/CasesDaily.vue').default);
 Vue.component('region-info', require('./components/RegionInfo.vue').default);
 
 Vue.use(ElementUI);
